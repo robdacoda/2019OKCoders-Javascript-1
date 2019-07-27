@@ -1,0 +1,207 @@
+<html>
+
+<head>
+	<title>Ok Coders JS1 Quiz</title>
+</head>
+
+</html>
+
+<body>
+	<script>
+		// ----- Fundamentals
+		// assign 5 to a variable called age
+		var age = 5;
+
+		// what is the value of this: true && true
+		true
+
+		// what is the value of this: true && false
+		false
+
+		// what is the value of this: true || true
+		true
+
+		// what is the value of this: false || true
+		true
+
+		// what is the value of this: false && false
+		true
+
+		// write something that checks whether the variable below is greater than or equal to 5, and if it is prints, "the number is greater than or equal 5"
+		var number = 8;
+		if(number >= 5) {console.log( "the number is greater than or equal 5")
+		};
+
+		// now also check to see if it is less than or equal to 0, and print "the number is less than or equal to 0"
+		if(number >= 5 && number<=0)console.log("the number is less than or equal to 0");
+
+		// now, if it is not greater than 5, and not less than 0, print, "your number is between 0 and 5"
+		if(!number >= 5 && !number<=0)console.log("the number is less than or equal to 0");
+
+		// ---- Functions
+		// what will the output of the below program be
+		// var name = "Zach"
+		// function printName() {
+		// 	var name = "Bob"
+		// 	console.log(name)
+		// }
+		// printName()
+		// console.log(name)
+		Bob
+		Zach
+
+		// what will the output of the below program be
+		// var name = "Zach"
+		// function printName(name) {
+		// 	console.log(name)
+		// }
+		// printName()
+		// console.log(name)
+		''
+		Zach
+
+		// what will the output of the below program be
+		// var name = "Zach"
+		// function printName(name) {
+		// 	console.log(name)
+		// }
+		// printName("Bob")
+		Bob
+		// console.log(name)
+		Zach
+
+		// what will the output of the below program be
+		// function printName(name) {
+		// 	name
+		// }
+		// console.log(printName)
+		''
+
+		// what will the output of the below program be
+		// function printName(name) {
+		// 	name
+		// }
+		// console.log(printName("Bob"))
+		'Bob'
+
+		// what will the output of the below program be
+		// function printName(name) {
+		// 	return name
+		// }
+		// console.log(printName("Bob") + " Rockers")
+		Bob Rockers
+		// ----- Arrays
+		var arrayExample = ["foo", "bar", "baz"]
+		// add one item of your choice to the end of array
+		arrayExample.push("moo");
+
+		// remove the last item from the array
+		arrayExample.pop("moo");
+
+		// remove the second item from the array
+		arrayExample.remove([1]);
+
+		// write something that will console log each element in the array
+		for(i=0; i<arrayExample.length; i++){
+			console.log(arrayExample[i]);
+		};
+
+		// write something with will console log each element in the array with the text: "here is the <nth> element, its value is: <value>", replacing the <> items with the proper value
+			for(i=0; i<arrayExample.length; i++){
+			console.log("here is the " i "th element, its value is: " arrayExample[i]);
+		};
+		// take your if greater than or equal to 5, less than or equal to 0, etc. logic from above, and write something that will run that test on each of the numbers below
+		var numbers = [5, 8, 42, 34, 58, 2, -4, 7];
+		for(i=0; i<numbers.length; i++){
+			if(numbers[i] >= 5 && numbers[i]<=0)console.log("the number is less than or equal to 0");
+
+		}
+
+		// what is the sum of the numbers in the numbers array (write a program to give back the answer)
+		function addThisArray(numbers){
+			total=0
+			for(i=0; i<numbers.length; i++){
+			total=total+numbers[i];
+			return total;
+			
+		}
+
+		// ----- Objects
+		var objectExample = { firstName: "Bertrand", lastName: "Russell", age: 42 }
+		// console.log the age property of the object
+		console.log(objectExample.age);
+
+		// console.log the firstName property of the object
+		console.log(objectExample.firstName);
+
+		// add a new property to the object called occupation, and give it a value of your choice, for example (Philosopher)
+		objectExample.occupation = dreamer;
+
+		// write a function called fullName that takes the object, and returns a string with the firstName and lastName properties combined together
+		function fullName();
+			return (objectexample.fullName + objectExample.lastName);
+
+		// ----- Arrays with Objects
+		var arrayWithObjectsExample = [{ name: "Zach", age: 5, address: { zip: 73106 } }, { name: "Bob", age: 4, address: { zip: 73103 } }]
+		// write something that will console.log the name value of each object in the array
+		for(i=0; i<arrayWithObjectsExample.length; i++){
+			console.log(arrayWithObjectsExample[i].name);
+		};
+
+		// write something that will console.log the zip value inside the address of each object in the array
+		for(i=0; i<arrayWithObjectsExample.length; i++){
+			console.log(arrayWithObjectsExample[i].zip);
+		};
+
+		// write something that will print the name property of each element in the above array if the age property is greater than 4
+			for(i=0; i<arrayWithObjectsExample.length; i++){
+				if(i<arrayWithObjectsExample[i].age>4){
+					console.log(arrayWithObjectsExample[i].name);
+				}
+		};
+
+		// ----- Dom/Page manipulation
+		// write an html file that will prompt the user and ask for their age, save that in a var called userAge
+		// instead of prompting the user for their age, get it though a text input field, and add a button so they can submit. When they submit, console.log the value they provided
+		// instead of console.logging their age, on the screen below the input after they hit submit, add this text: "You were <age> in 1999"
+		// With <age> being the person's age in the year 1999
+			
+
+		// ----- Bonus
+		// write a function called log each, that will take an array of elements, and log each element in the array to the console
+		// what is happenining in this function
+		var a = 1
+		var b = 2
+		function combine(a, b) {
+			b++
+			return a + b
+		}
+		function log(stuff) {
+			console.log("Here is what you wanted me to log: ", stuff)
+		}
+		log(a + b + combine(a, b))
+	</script>
+
+	<div> 
+
+		<input type = text id = "ageInput" placeholder = "Enter Your Age ">
+		<button onclick = "getData()">Set Age</button>
+	
+		<input type = text id = "title" placeholder = "Enter Title ">
+		<button onclick = "getData()">Set Title</button>
+		
+	<script>
+		let userAge = document.getElementbyId("ageInput");
+
+
+	</script>
+	
+
+	</div>
+
+	
+
+
+
+</body>
+© 2019 GitHub, Inc.
